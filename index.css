@@ -37,7 +37,7 @@ body {
 .block {
     background-color: #fff; /* background color in block */
     border: 1px solid #000; /* border color around block */
-    display: flex;
+    display: flex; /* web responsiveness */
     justify-content: center;
     align-items: center;
     font-size: large; /* font-size  */
