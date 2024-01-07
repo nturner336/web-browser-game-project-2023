@@ -1,2 +1,5 @@
 # web-browser-game-project-2023
-# image sources:  
+# image sources:  None
+# html file: add containers and divs to build out tic tac toe grid and link css and javascript files.
+# css file:  styling rules for html tags
+# javascript file:  tic tac toe logic
