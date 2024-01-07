@@ -33,23 +33,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // User clicks on a block to place X or O
     const onClick = (e) => {
-        const block = e.target; console.log(e)
-        if (block.innerText !== '') return;
-
-        block.innerText = currentPlayer;
-        if (checkYesWin()) {
-            alert(`Player ${currentPlayer} Wins!`);
-            return;
+        const block = e.target;
+        if (block.innerText === '') {
+            block.innerText = currentPlayer;
+            if (checkYesWin()) {
+                alert(`Player ${currentPlayer} Wins!`);
+                return;
+            }
+            if (checkNoWin()) {
+                alert('No Winner');
+                return;
+            }
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         }
-        if (checkNoWin()) {
-            alert('No Winner');
-            return;
-        }
-
-        console.log(BEFORE,currentPlayer)
-        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        console.log(AFTER,currentPlayer)
-    };
+    };    
 
     const restartGame = () => {
         currentPlayer = 'X';
