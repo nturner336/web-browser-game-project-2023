@@ -36,13 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const block = e.target;
         if (block.innerText === '') {
             block.innerText = currentPlayer;
+
             if (checkYesWin()) {
                 alert(`Player ${currentPlayer} Wins!`);
-                return;
+                return; //determine Winner logic
             }
             if (checkNoWin()) {
                 alert('No Winner');
-                return;
+                return; //determine no Winner logic
             }
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         }
